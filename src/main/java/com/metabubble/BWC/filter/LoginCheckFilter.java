@@ -24,8 +24,8 @@ public class LoginCheckFilter implements Filter {
     public static final AntPathMatcher PATH_MATCHER = new AntPathMatcher();
 
     @Override
-    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)
-            throws IOException, ServletException {
+    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse,
+                         FilterChain filterChain) throws IOException, ServletException {
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         HttpServletResponse response = (HttpServletResponse) servletResponse;
 
@@ -36,8 +36,8 @@ public class LoginCheckFilter implements Filter {
         String requestURI = request.getRequestURI(); // /backend/login.html
         //定义不需要处理的请求路径
         String[] urls = new String[]{
-                "/employee/login",
-                "/employee/logout",
+                "/admin/login",
+                "/admin/logout",
                 "/backend/**",
                 "/front/**",
                 "/common/**",
