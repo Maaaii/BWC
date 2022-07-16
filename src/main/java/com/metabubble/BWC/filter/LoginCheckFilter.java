@@ -36,16 +36,18 @@ public class LoginCheckFilter implements Filter {
         String requestURI = request.getRequestURI(); // /backend/login.html
         //定义不需要处理的请求路径
         String[] urls = new String[]{
-                "/admin/login",
-                "/admin/logout",
-                "/admin/checkCodeGen",
+                //书写功能阶段，停止拦截器，暂时让请求发出
                 "/admin/**",
+                "/config/**",
+                "/cusservice/**",
                 "/merchant/**",
+                "/merchantType/**",
+                "/orders/**",
+                "/team/**",
+                "/user/**",
                 "/backend/**",
                 "/front/**",
                 "/common/**",
-                "/user/sendMsg",
-                "/user/login"
         };
         //判断本次请求是否需要处理
         boolean check = check(urls,requestURI);

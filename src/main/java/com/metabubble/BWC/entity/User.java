@@ -56,6 +56,7 @@ public class User implements Serializable {
     private Integer grade;
 
     //会员过期日期
+    //格式：2021-07-15 05:16:58
     private LocalDateTime membershipExpTime;
 
     //创建时间

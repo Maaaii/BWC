@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
  * 商家类型
  */
 @Data
-public class merchantType implements Serializable {
+public class MerchantType implements Serializable {
     //序列化
     private static final long serialVersionUID = 1L;
 
@@ -26,9 +26,9 @@ public class merchantType implements Serializable {
 
     //创建时间
     @TableField(fill = FieldFill.INSERT) //插入时填充字段
-    private LocalDateTime create_time;
+    private LocalDateTime createTime;
 
     //更新时间
     @TableField(fill = FieldFill.INSERT_UPDATE) //插入和更新时填充字段
-    private LocalDateTime update_time;
+    private LocalDateTime updateTime;
 }

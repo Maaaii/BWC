@@ -12,11 +12,14 @@ import java.time.LocalDateTime;
  * 订单
  */
 @Data
-public class Order implements Serializable {
+public class Orders implements Serializable {
     //序列化
     private static final long serialVersionUID = 1L;
 
     //订单id
+    private Long id;
+
+    //用户id
     private Long userId;
 
     //商家id
@@ -45,9 +48,9 @@ public class Order implements Serializable {
 
     //创建时间
     @TableField(fill = FieldFill.INSERT) //插入时填充字段
-    private LocalDateTime create_time;
+    private LocalDateTime createTime;
 
     //更新时间
     @TableField(fill = FieldFill.INSERT_UPDATE) //插入和更新时填充字段
-    private LocalDateTime update_time;
+    private LocalDateTime updateTime;
 }
