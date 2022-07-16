@@ -4,14 +4,11 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.metabubble.BWC.common.CheckCodeUtil;
 import com.metabubble.BWC.common.R;
 import com.metabubble.BWC.entity.Admin;
-import com.metabubble.BWC.entity.User;
 import com.metabubble.BWC.service.AdminService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.DigestUtils;
 import org.springframework.web.bind.annotation.*;
-
-import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
