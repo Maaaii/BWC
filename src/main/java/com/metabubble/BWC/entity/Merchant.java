@@ -45,16 +45,16 @@ public class Merchant implements Serializable {
     private String remark;
 
     //非会员最低消费
-    private BigDecimal minConsumption0;
+    private BigDecimal minConsumption_0;
 
     //非会员满减额
-    private BigDecimal rebate0;
+    private BigDecimal rebate_0;
 
     //会员最低消费
-    private BigDecimal minConsumption1;
+    private BigDecimal minConsumption_1;
 
     //会员满减额
-    private BigDecimal rebate1;
+    private BigDecimal rebate_1;
 
     //创建时间
     @TableField(fill = FieldFill.INSERT)
