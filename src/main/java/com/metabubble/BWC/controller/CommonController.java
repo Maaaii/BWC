@@ -24,7 +24,7 @@ import java.util.UUID;
 @Slf4j
 public class CommonController {
 
-    @Value("${food.path}")
+    @Value("${BWC.path}")
     private String basePath;
 
     /**

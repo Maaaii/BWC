@@ -38,6 +38,8 @@ public class LoginCheckFilter implements Filter {
         String[] urls = new String[]{
                 "/admin/login",
                 "/admin/logout",
+                "/admin/checkCodeGen",
+                "/admin/*",
                 "/backend/**",
                 "/front/**",
                 "/common/**",

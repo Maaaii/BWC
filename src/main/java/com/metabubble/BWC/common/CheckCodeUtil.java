@@ -19,8 +19,18 @@ public class CheckCodeUtil {
     public static final String VERIFY_CODES = "123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     private static Random random = new Random();
 
+    /**
+     * 示例：验证码功能的使用
+     * @param args
+     * @throws Exception
+     */
     public static void main(String[] args) throws Exception {
-        OutputStream fos = new FileOutputStream("D:\\IDEA\\webJie\\brand-case\\src\\main\\webapp\\imgs\\a.jpg");
+        //查找相对路径地址
+        File file = new File("./");
+        System.out.println(file.getAbsoluteFile());
+        //存放地址
+        OutputStream fos = new FileOutputStream("src/main/resources/photo/CheckCodeGen.jpg");
+        //验证码信息：宽度100，高度50，传输到fos地址，长度为4
         String checkCode = CheckCodeUtil.outputVerifyImage(100,50,fos,4);
         System.out.println(checkCode);
     }

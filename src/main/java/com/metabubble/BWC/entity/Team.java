@@ -5,33 +5,34 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 /**
- * 管理员
+ * 团队
  */
 @Data
-public class Admin implements Serializable {
+public class Team implements Serializable {
     //序列化
     private static final long serialVersionUID = 1L;
 
-    //管理员id
+    //团队id
     private Long id;
 
-    //管理员名称
-    private String name;
+    //一级团长id
+    private Long user01Id;
 
-    //邮箱
-    private String email;
+    //二级团长id
+    private Long user02Id;
 
-    //密码
-    private String password;
+    //成员id
+    private Long userId;
 
-    //类型，0为业务管理员，1为财务管理员，2为超级管理员
-    private Integer type;
+    //全部消费金额
+    private BigDecimal totalAmount;
 
-    //是否启用,0为禁用，1为启用
-    private Integer status;
+    //全部可提现金额
+    private BigDecimal totalWithdrawnAmount;
 
     //创建时间
     @TableField(fill = FieldFill.INSERT) //插入时填充字段
@@ -40,5 +41,4 @@ public class Admin implements Serializable {
     //更新时间
     @TableField(fill = FieldFill.INSERT_UPDATE) //插入和更新时填充字段
     private LocalDateTime update_time;
-
 }
