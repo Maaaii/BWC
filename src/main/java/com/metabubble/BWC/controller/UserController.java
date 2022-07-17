@@ -23,4 +23,6 @@ public class UserController {
         System.out.println("test");
     }
 
+    public void test01( ){}
+
 }
