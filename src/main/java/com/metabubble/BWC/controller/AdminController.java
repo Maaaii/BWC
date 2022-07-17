@@ -101,6 +101,8 @@ public class AdminController {
         request.getSession().removeAttribute("admin");
         return R.success("退出成功");
     }
+
+    public void test() {}
 }
 
 
